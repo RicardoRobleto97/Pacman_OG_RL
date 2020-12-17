@@ -140,16 +140,16 @@ void Pintar_Puntos() {
     gotoxy(14, 26); printf("%c", 46);
     gotoxy(14, 27); printf("%c", 46);
     
-    //Puntos Derecho Izquierdo
+    //Puntos Lateral Derechoo
 
-    MurosXP[10] = 14; MurosYP[10] = 20;
-    MurosXP[11] = 14; MurosYP[11] = 21;
-    MurosXP[12] = 14; MurosYP[12] = 22;
-    MurosXP[13] = 14; MurosYP[13] = 23;
-    MurosXP[14] = 14; MurosYP[14] = 24;
-    MurosXP[15] = 14; MurosYP[15] = 25;
-    MurosXP[16] = 14; MurosYP[16] = 26;
-    MurosXP[17] = 14; MurosYP[17] = 27;
+    MurosXP[30] = 64; MurosYP[30] = 10;
+    MurosXP[31] = 64; MurosYP[31] = 11;
+    MurosXP[32] = 64; MurosYP[32] = 12;
+    MurosXP[33] = 64; MurosYP[33] = 13;
+    MurosXP[34] = 64; MurosYP[34] = 14;
+    MurosXP[35] = 64; MurosYP[35] = 15;
+    MurosXP[36] = 64; MurosYP[36] = 16;
+    MurosXP[37] = 64; MurosYP[37] = 17;
 
     gotoxy(64, 10); printf("%c", 46);
     gotoxy(64, 11); printf("%c", 46);
@@ -163,22 +163,48 @@ void Pintar_Puntos() {
     gotoxy(64, 16); printf("%c", 46);
     gotoxy(64, 17); printf("%c", 46);
 
- /*   for (int i = 0; i < 200; i++)
-    {   
-        MurosXP[i];
-        MurosYP[i];
-        if (MurosXP[i] = m && MurosYP[i] = m) {
+    MurosXP[40] = 64; MurosYP[40] = 20;
+    MurosXP[41] = 64; MurosYP[41] = 21;
+    MurosXP[42] = 64; MurosYP[42] = 22;
+    MurosXP[43] = 64; MurosYP[43] = 23;
+    MurosXP[44] = 64; MurosYP[44] = 24;
+    MurosXP[45] = 64; MurosYP[45] = 25;
+    MurosXP[46] = 64; MurosYP[46] = 26;
+    MurosXP[47] = 64; MurosYP[47] = 27;
 
-            gotoxy(i, i); printf(" ");
-        }
-    }*/
+
+    gotoxy(64, 20); printf("%c", 46);
+    gotoxy(64, 21); printf("%c", 46);
+
+    gotoxy(64, 22); printf("%c", 46);
+    gotoxy(64, 23); printf("%c", 46);
+
+    gotoxy(64, 24); printf("%c", 46);
+    gotoxy(64, 25); printf("%c", 46);
+
+    gotoxy(64, 26); printf("%c", 46);
+    gotoxy(64, 27); printf("%c", 46);
+
+
+    gotoxy(64, 30); printf("%c", 46);
+    gotoxy(64, 31); printf("%c", 46);
+
+    gotoxy(64, 32); printf("%c", 46);
+    gotoxy(64, 33); printf("%c", 46);
+
+    gotoxy(64, 34); printf("%c", 46);
+    gotoxy(64, 35); printf("%c", 46);
+
+    gotoxy(64, 36); printf("%c", 46);
+    gotoxy(64, 37); printf("%c", 46);
+
 }
 void Pintar_Muros() {
 
    
 
    
-    //Pared lateral
+    //Pared lateral Superior de Abajo
     MurosX[0] = 30; MurosY[0] = 40;
     MurosX[1] = 31; MurosY[1] = 40;
     MurosX[2] = 32; MurosY[2] = 40;
@@ -188,7 +214,15 @@ void Pintar_Muros() {
     MurosX[6] = 36; MurosY[6] = 40;
     MurosX[7] = 37; MurosY[7] = 40;
 
-   
+
+
+    gotoxy(23, 40); printf("%c", 35);
+    gotoxy(24, 40); printf("%c", 220);
+    gotoxy(25, 40); printf("%c", 220);
+    gotoxy(26, 40); printf("%c", 220);
+    gotoxy(27, 40); printf("%c", 220);
+    gotoxy(28, 40); printf("%c", 220);
+    gotoxy(29, 40); printf("%c", 220);
 
     gotoxy(30, 40); printf("%c", 35);
     gotoxy(31, 40); printf("%c", 220);
@@ -201,24 +235,67 @@ void Pintar_Muros() {
 
     gotoxy(36, 40); printf("%c", 220);
     gotoxy(37, 40); printf("%c", 220);
+    gotoxy(38, 40); printf("%c", 220);
+    gotoxy(39, 40); printf("%c", 220);
+    gotoxy(40, 40); printf("%c", 220);
+    gotoxy(41, 40); printf("%c", 220);
+    gotoxy(42, 40); printf("%c", 220);
+    gotoxy(43, 40); printf("%c", 220);
+    gotoxy(44, 40); printf("%c", 220);
+    gotoxy(45, 40); printf("%c", 220);
+    gotoxy(46, 40); printf("%c", 220);
+    gotoxy(47, 40); printf("%c", 220);
+    gotoxy(48, 40); printf("%c", 220);
+    gotoxy(49, 40); printf("%c", 220);
+    gotoxy(50, 40); printf("%c", 220);
+    gotoxy(51, 40); printf("%c", 220);
+    gotoxy(52, 40); printf("%c", 220);
+    gotoxy(53, 40); printf("%c", 220);
+    gotoxy(54, 40); printf("%c", 220);
+    gotoxy(55, 40); printf("%c", 220);
+    gotoxy(56, 40); printf("%c", 220);
+    //gotoxy(57, 40); printf("%c", 220);
+
 
     MurosX[100] = 23; MurosY[100] = 40;
-    MurosX[101] = 24; MurosY[1] = 40;
-    MurosX[102] = 25; MurosY[2] = 40;
-    MurosX[103] = 26; MurosY[3] = 40;
-    MurosX[104] = 27; MurosY[4] = 40;
-    MurosX[105] = 28; MurosY[5] = 40;
-    MurosX[106] = 29; MurosY[6] = 40;
+    MurosX[101] = 24; MurosY[101] = 40;
+    MurosX[102] = 25; MurosY[102] = 40;
+    MurosX[103] = 26; MurosY[103] = 40;
+    MurosX[104] = 27; MurosY[104] = 40;
+    MurosX[105] = 28; MurosY[105] = 40;
+    MurosX[106] = 29; MurosY[106] = 40;
+    MurosX[107] = 30; MurosY[107] = 40;
+    MurosX[108] = 31; MurosY[108] = 40;
+    MurosX[109] = 32; MurosY[109] = 40;
+    MurosX[110] = 33; MurosY[110] = 40;
+    MurosX[111] = 34; MurosY[111] = 40;
+    MurosX[112] = 35; MurosY[112] = 40;
+    MurosX[113] = 36; MurosY[113] = 40;
+    MurosX[114] = 37; MurosY[114] = 40;
+    MurosX[115] = 38; MurosY[115] = 40;
+    MurosX[116] = 39; MurosY[116] = 40;
+    MurosX[117] = 40; MurosY[117] = 40;
+    MurosX[118] = 41; MurosY[118] = 40;
+    MurosX[119] = 42; MurosY[119] = 40;
+    MurosX[120] = 43; MurosY[120] = 40;
+    MurosX[121] = 44; MurosY[121] = 40;
+    MurosX[122] = 45; MurosY[122] = 40;
+    MurosX[123] = 46; MurosY[123] = 40;
+    MurosX[124] = 47; MurosY[124] = 40;
+    MurosX[125] = 48; MurosY[125] = 40;
+    MurosX[126] = 49; MurosY[126] = 40;
+    MurosX[127] = 50; MurosY[127] = 40;
+    MurosX[128] = 51; MurosY[128] = 40;
+    MurosX[129] = 52; MurosY[129] = 40;
+    MurosX[130] = 53; MurosY[130] = 40;
+    MurosX[131] = 54; MurosY[131] = 40;
+    MurosX[132] = 55; MurosY[132] = 40;
+
+
     //MurosX[7] = ; MurosY[7] = 40;
 
 
-    gotoxy(23, 40); printf("%c", 220);
-    gotoxy(24, 40); printf("%c", 220);
-    gotoxy(25, 40); printf("%c", 220);
-    gotoxy(26, 40); printf("%c", 220);
-    gotoxy(27, 40); printf("%c", 220);
-    gotoxy(28, 40); printf("%c", 220);
-    gotoxy(29, 40); printf("%c", 220);
+    
     //gotoxy(29, 40); printf("%c", 220);
 
 
@@ -228,7 +305,8 @@ void Pintar_Muros() {
     MurosXY[1][1] = 20, 31;
     MurosXY[2][2] = 20, 32;
     MurosXY[3][3] = 20, 33;*/
-    //Muros Verticales
+
+    //Muros Verticales Superior Izquierda
     MurosX[10] = 20; MurosY[10] = 30;
     MurosX[11] = 20; MurosY[11] = 31;
     MurosX[12] = 20; MurosY[12] = 32;
@@ -252,17 +330,7 @@ void Pintar_Muros() {
 
 
 
-    gotoxy(60, 30); printf("%c", 35);
-    gotoxy(60, 31); printf("%c", 219);
-
-    gotoxy(60, 32); printf("%c", 219);
-    gotoxy(60, 33); printf("%c", 219);
-
-    gotoxy(60, 34); printf("%c", 219);
-    gotoxy(60, 35); printf("%c", 219);
-
-    gotoxy(60, 36); printf("%c", 219);
-    gotoxy(60, 37); printf("%c", 219);
+   
 
     MurosX[20] = 20; MurosY[10] = 20;
     MurosX[21] = 20; MurosY[21] = 21;
@@ -307,7 +375,55 @@ void Pintar_Muros() {
 
     gotoxy(20, 16); printf("%c", 219);
 
+    //Muros Verticales Superior Derecha
+    MurosX[40] = 60; MurosY[40] = 30;
+    MurosX[41] = 60; MurosY[41] = 31;
+    MurosX[42] = 60; MurosY[42] = 32;
+    MurosX[43] = 60; MurosY[43] = 33;
+    MurosX[44] = 60; MurosY[44] = 34;
+    MurosX[45] = 60; MurosY[45] = 35;
+    MurosX[46] = 60; MurosY[46] = 36;
 
+    gotoxy(60, 30); printf("%c", 35);
+    gotoxy(60, 31); printf("%c", 219);
+
+    gotoxy(60, 32); printf("%c", 219);
+    gotoxy(60, 33); printf("%c", 219);
+
+    gotoxy(60, 34); printf("%c", 219);
+    gotoxy(60, 35); printf("%c", 219);
+
+    gotoxy(60, 36); printf("%c", 219);
+    gotoxy(60, 37); printf("%c", 219);
+
+    MurosX[50] = 60; MurosY[50] = 20;
+    MurosX[51] = 60; MurosY[51] = 21;
+    MurosX[52] = 60; MurosY[52] = 22;
+    MurosX[53] = 60; MurosY[53] = 23;
+    MurosX[54] = 60; MurosY[54] = 24;
+    MurosX[55] = 60; MurosY[55] = 25;
+    MurosX[56] = 60; MurosY[56] = 26;
+    MurosX[57] = 60; MurosY[57] = 27;
+    MurosX[58] = 60; MurosY[58] = 10;
+    MurosX[59] = 60; MurosY[59] = 11;
+    MurosX[60] = 60; MurosY[60] = 12;
+    MurosX[61] = 60; MurosY[61] = 13;
+    MurosX[62] = 60; MurosY[62] = 14;
+    MurosX[63] = 60; MurosY[63] = 15;
+    MurosX[64] = 60; MurosY[64] = 16;
+
+
+    gotoxy(60, 20); printf("%c", 35);
+    gotoxy(60, 21); printf("%c", 219);
+
+    gotoxy(60, 22); printf("%c", 219);
+    gotoxy(60, 23); printf("%c", 219);
+
+    gotoxy(60, 24); printf("%c", 219);
+    gotoxy(60, 25); printf("%c", 219);
+
+    gotoxy(60, 26); printf("%c", 219);
+    gotoxy(60, 27); printf("%c", 219);
 
     gotoxy(60, 10); printf("%c", 35);
     gotoxy(60, 11); printf("%c", 219);
@@ -322,7 +438,44 @@ void Pintar_Muros() {
 
 
 
-    //Pared Lateral
+    //Pared Lateral Superior Derecha
+
+    MurosX[140] = 23; MurosY[140] = 7;
+    MurosX[141] = 24; MurosY[141] = 7;
+    MurosX[142] = 25; MurosY[142] = 7;
+    MurosX[143] = 26; MurosY[143] = 7;
+    MurosX[144] = 27; MurosY[144] = 7;
+    MurosX[145] = 28; MurosY[145] = 7;
+    MurosX[146] = 29; MurosY[146] = 7;
+    MurosX[147] = 30; MurosY[147] = 7;
+    MurosX[148] = 31; MurosY[148] = 7;
+    MurosX[149] = 32; MurosY[149] = 7;
+    MurosX[150] = 33; MurosY[150] = 7;
+    MurosX[151] = 34; MurosY[151] = 7;
+    MurosX[152] = 35; MurosY[152] = 7;
+    MurosX[153] = 36; MurosY[153] = 7;
+    MurosX[154] = 37; MurosY[154] = 7;
+    MurosX[155] = 38; MurosY[155] = 7;
+    MurosX[156] = 39; MurosY[156] = 7;
+    MurosX[157] = 40; MurosY[157] = 7;
+    MurosX[158] = 41; MurosY[158] = 7;
+    MurosX[159] = 42; MurosY[159] = 7;
+    MurosX[160] = 43; MurosY[160] = 7;
+    MurosX[161] = 44; MurosY[161] = 7;
+    MurosX[162] = 45; MurosY[162] = 7;
+    MurosX[163] = 46; MurosY[163] = 7;
+    MurosX[164] = 47; MurosY[164] = 7;
+    MurosX[165] = 48; MurosY[165] = 7;
+    MurosX[166] = 49; MurosY[166] = 7;
+    MurosX[167] = 50; MurosY[167] = 7;
+    MurosX[168] = 51; MurosY[168] = 7;
+    MurosX[169] = 52; MurosY[169] = 7;
+    MurosX[170] = 53; MurosY[170] = 7;
+    MurosX[171] = 54; MurosY[171] = 7;
+    MurosX[172] = 55; MurosY[172] = 7;
+    MurosX[173] = 56; MurosY[173] = 7;
+    MurosX[174] = 57; MurosY[174] = 7;
+
     gotoxy(23, 7); printf("%c", 220);
     gotoxy(24, 7); printf("%c", 220);
     gotoxy(25, 7); printf("%c", 220);
@@ -362,34 +515,8 @@ void Pintar_Muros() {
     gotoxy(55, 7); printf("%c", 220);
     gotoxy(56, 7); printf("%c", 220);
     gotoxy(57, 7); printf("%c", 220);
-    gotoxy(58, 7); printf("%c", 220);
-    gotoxy(59, 7); printf("%c", 220);
 
 
-
-    //gotoxy(20, 17); printf("%c", 219);
-    //int Muros[5][5];
-
-    //int muros_size = (sizeof(Muros) / sizeof(Muros[0][0]));
-
-    //for (int x = 12; x < muros_size - 1; x++) {
-
-    //    for (int y = 4; y < muros_size - 1; y++) {
-    //        if (x == 12 || x == 23) {
-
-    //            gotoxy(x, y); printf("%c", 35);
-
-    //        }
-    //        else if (y == 4 || y == 23) {
-    //            gotoxy(x, y); printf("%c", 35);
-    //        }
-    //        else {
-    //            gotoxy(x, y); printf("%c", 46);
-
-    //        }
-    //    }
-    //}
-    //return true;
 }
 bool Pacman::verificarMovimiento() {
     for (int i = 0; i < 200; i++) {
