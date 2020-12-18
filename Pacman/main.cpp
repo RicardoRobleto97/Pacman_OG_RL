@@ -25,8 +25,8 @@ char tecla;
 int sal = 1;
 int xvi;
 int time;
-int MurosX[200];
-int MurosY[200];
+int MurosX[250];
+int MurosY[250];
 int MurosXP[200];
 int MurosYP[200];
 //int Puntaje=0;
@@ -373,7 +373,7 @@ void Pintar_Muros() {
     gotoxy(20, 16); printf("%c", 219);
 
     //Muros Verticales Superior Derecha
-    MurosX[40] = 60; MurosY[40] = 30;
+   // MurosX[40] = 60; MurosY[40] = 30;
     MurosX[41] = 60; MurosY[41] = 31;
     MurosX[42] = 60; MurosY[42] = 32;
     MurosX[43] = 60; MurosY[43] = 33;
@@ -381,8 +381,8 @@ void Pintar_Muros() {
     MurosX[45] = 60; MurosY[45] = 35;
     MurosX[46] = 60; MurosY[46] = 36;
 
-    gotoxy(60, 30); printf("%c", 35);
-    gotoxy(60, 31); printf("%c", 219);
+   // gotoxy(60, 30); printf("%c", 35);
+    gotoxy(60, 31); printf("%c", 35);
 
     gotoxy(60, 32); printf("%c", 219);
     gotoxy(60, 33); printf("%c", 219);
@@ -513,10 +513,83 @@ void Pintar_Muros() {
     gotoxy(56, 7); printf("%c", 220);
     gotoxy(57, 7); printf("%c", 220);
 
+    //Cruz
+    MurosX[175] = 40; MurosY[175] = 15;
+    MurosX[176] = 40; MurosY[176] = 16;
+    MurosX[177] = 40; MurosY[177] = 17;
+    MurosX[178] = 40; MurosY[178] = 18;
+    MurosX[179] = 40; MurosY[179] = 19;
+    MurosX[179] = 40; MurosY[179] = 20;
+    MurosX[180] = 40; MurosY[180] = 21;
+    MurosX[181] = 40; MurosY[181] = 22;
+    MurosX[182] = 40; MurosY[182] = 23;
+    MurosX[183] = 40; MurosY[183] = 24;
+    MurosX[184] = 40; MurosY[184] = 25;
+    MurosX[185] = 40; MurosY[185] = 26;
+    MurosX[186] = 40; MurosY[186] = 27;
+    MurosX[187] = 40; MurosY[187] = 28;
+    MurosX[189] = 40; MurosY[189] = 29;
+    MurosX[190] = 40; MurosY[190] = 30;
 
+    gotoxy(40, 15); printf("%c", 219);
+    gotoxy(40, 16); printf("%c", 219);
+    gotoxy(40, 17); printf("%c", 219);
+    gotoxy(40, 18); printf("%c", 219);
+    gotoxy(40, 19); printf("%c", 219);
+
+
+    gotoxy(40, 20); printf("%c", 219);
+    gotoxy(40, 20); printf("%c", 219);
+    gotoxy(40, 21); printf("%c", 219);
+    gotoxy(40, 22); printf("%c", 219);
+    gotoxy(40, 23); printf("%c", 219);
+    gotoxy(40, 24); printf("%c", 219);
+    gotoxy(40, 25); printf("%c", 219);
+    gotoxy(40, 26); printf("%c", 219);
+    gotoxy(40, 27); printf("%c", 219);
+    gotoxy(40, 28); printf("%c", 219);
+    gotoxy(40, 29); printf("%c", 219);
+    gotoxy(40, 30); printf("%c", 219);
+
+
+    MurosX[191] = 41; MurosY[191] = 23;
+    MurosX[192] = 42; MurosY[192] = 23;
+    MurosX[193] = 43; MurosY[193] = 23;
+    MurosX[194] = 44; MurosY[194] = 23;
+    MurosX[195] = 45; MurosY[195] = 23;
+    MurosX[196] = 46; MurosY[196] = 23;
+    MurosX[197] = 47; MurosY[197] = 23;
+    MurosX[198] = 48; MurosY[198] = 23;
+
+    gotoxy(41, 23); printf("%c", 219);
+    gotoxy(42, 23); printf("%c", 219);
+    gotoxy(43, 23); printf("%c", 219);
+    gotoxy(44, 23); printf("%c", 219);
+    gotoxy(45, 23); printf("%c", 219);
+    gotoxy(46, 23); printf("%c", 219);
+    gotoxy(47, 23); printf("%c", 219);
+    gotoxy(48, 23); printf("%c", 219);
+    
+    MurosX[199] = 39; MurosY[199] = 23;
+    MurosX[200] = 38; MurosY[200] = 23;
+    MurosX[201] = 37; MurosY[201] = 23;
+    MurosX[202] = 36; MurosY[202] = 23;
+    MurosX[203] = 35; MurosY[203] = 23;
+    MurosX[204] = 34; MurosY[204] = 23;
+    MurosX[205] = 33; MurosY[205] = 23;
+    MurosX[206] = 32; MurosY[206] = 23;
+
+    gotoxy(39, 23); printf("%c", 219);
+    gotoxy(38, 23); printf("%c", 219);
+    gotoxy(37, 23); printf("%c", 219);
+    gotoxy(36, 23); printf("%c", 219);
+    gotoxy(35, 23); printf("%c", 219);
+    gotoxy(34, 23); printf("%c", 219);
+    gotoxy(33, 23); printf("%c", 219);
+    gotoxy(32, 23); printf("%c", 219);
 }
 bool Pacman::verificarMovimiento() {
-    for (int i = 0; i < 200; i++) {
+    for (int i = 0; i < 250; i++) {
         if (x+2 == MurosX[i] && y == MurosY[i]) {
             borrar();
             x -= 2;
@@ -678,9 +751,7 @@ void Pacman::mover() {
        // pintar();
           //if(tecla=='c')
         pintar_vidas();
-        //gotoxy(x, y); printf(">");
-        //pintar();
-      
+
 
     }
 
@@ -695,11 +766,7 @@ void Pacman::pintar_vidas() {
     }
    
 }
-//void Pancitos::Puntaje_Colors() {
-//
-//    gotoxy(100, 20); printf("Puntaje%d : ", puntos);
-//
-//}
+
 void Pacman::Puntaje() {
     gotoxy(100, 20); printf("Puntaje%d : ", puntaje);
 
@@ -786,37 +853,67 @@ void Ghosts::pintar() {
 
     gotoxy(x, y); printf("%c", 77);
 }
+ bool Ghosts::verificarMovimiento() {
+     for (int i = 0; i < 250; i++) {
+         if (x + 2 == MurosX[i] && y == MurosY[i]) {
+             borrar();
+             x --;
+             return false;
 
+         }
+         else if (x - 2 == MurosX[i] && y == MurosY[i]) {
+             borrar();
+             x ++;
+
+             return false;
+         }
+         else if (x == MurosX[i] && y + 1 == MurosY[i]) {
+             borrar();
+
+             y--;
+             return false;
+
+         }
+         else if (x == MurosX[i] && y - 1 == MurosY[i]) {
+             borrar();
+
+             y++;
+             return false;
+
+         }
+     }
+     return true;
+
+}
 void Ghosts::movercpu() {
-    time = 0;
-
-     xvi = (rand() % 70) + 6;
-    //SetConsoleTextAttribute(C, FOREGROUND_RED | FOREGROUND_INTENSITY);
+ 
+    
+    SetConsoleTextAttribute(C, FOREGROUND_RED | FOREGROUND_INTENSITY);
     time++;
-    if (time > 10) {
+    if (time > 5) {
         time = 0;
-
+        xvi = (rand() % 70) + 6;
     }
-    if (xvi > 30 && xvi < 40 && x < 73) {
+    if (xvi > 30 && xvi < 40 && x < 73 && verificarMovimiento()) {
         borrar();
 
         x++;
 
         pintar();
     }
-    if (xvi > 20 && xvi < 30 && x < 12) {
+    if (xvi > 20 && xvi < 30 && x < 12 && verificarMovimiento()) {
         borrar();
 
         x--;
 
         pintar();
     }
-    if (xvi > 10 && xvi < 19 && y<44) {
+    if (xvi > 10 && xvi < 19 && y<44 && verificarMovimiento()) {
         borrar();
         y++;
         pintar();
     }
-    if (xvi > 10 && xvi < 19 && y < 4) {
+    if (xvi > 10 && xvi < 19 && y < 4 && verificarMovimiento()) {
         borrar();
         y--;
         pintar();
@@ -833,7 +930,7 @@ void Ghosts::movercpu_2() {
     int cpumove;
 
     bool cpulive = true;
-    //SetConsoleTextAttribute(C, FOREGROUND_BLUE | FOREGROUND_INTENSITY);
+    SetConsoleTextAttribute(C, FOREGROUND_BLUE | FOREGROUND_INTENSITY);
 
    /* distance += rand() % 10;
     pos = pos + (distance - pos);*/
@@ -846,7 +943,7 @@ void Ghosts::movercpu_2() {
         for (int i = 0; i < pos; i++) {
 
 
-            if (y < 44 && x < 73) {
+            if (y < 44 && x < 73 && x>13&& verificarMovimiento()){
 
                 borrar();
                 x++;
@@ -934,9 +1031,9 @@ void Game() {
     bool game_over;
     Pacman A(40, 10, 3, 0);
     game_over = false;
-    Pancitos B(30, 38, 0);
     Ghosts G(20, 5);
-    Ghosts H(40, 20);
+    Ghosts H(30, 20);
+    Ghosts O(50, 30);
     A.pintar();
     A.pintar_vidas();
     A.Pintar_Puntos();
@@ -956,6 +1053,7 @@ void Game() {
         B.puntos(30, 30, A);
         G.movercpu_2();
         H.movercpu();
+        O.movercpu();
         Sleep(5);
     }
 
@@ -963,10 +1061,6 @@ void Game() {
 }
 int main() {
 
-    //char press;
-
-   /// char run_again;
-   
 
     while (sal != 5) {
         rlutil::cls();

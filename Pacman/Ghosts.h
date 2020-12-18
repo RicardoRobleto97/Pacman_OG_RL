@@ -11,6 +11,7 @@ public:
     void borrar();
     void movercpu();
     void movercpu_2();
+    bool verificarMovimiento();
 
     void choque(class Pacman& C);
     Ghosts(int _x, int _y);
