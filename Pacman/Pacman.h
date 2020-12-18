@@ -32,7 +32,7 @@ public:
     bool verificarMovimiento();
     bool verificarPuntos();
     void Puntaje();
-
+    void Pintar_Puntos();
 };
 
 

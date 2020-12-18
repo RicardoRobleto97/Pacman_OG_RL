@@ -1,7 +1,7 @@
 #pragma once
 #ifndef GHOSTS_H
 #define GHOSTS_H
-
+//#include "Pacman.h"
 class Ghosts {
 
     int x, y;

@@ -16,13 +16,13 @@
 #define ABAJO 80
 #define IZQUIERDA 75
 #define DERECHA 77
-bool game_over;
-
 
 using namespace std;
 
 int lvl = 1;
-
+int pos = 1;
+char tecla;
+int sal = 1;
 int xvi;
 int time;
 int MurosX[200];
@@ -32,16 +32,6 @@ int MurosYP[200];
 //int Puntaje=0;
 //int Muros[30][30];
 HANDLE C = GetStdHandle(STD_OUTPUT_HANDLE);
-//void gotoxy(int x, int y) {
-//
-//    HANDLE hCon;
-//    hCon = GetStdHandle(STD_OUTPUT_HANDLE);
-//    COORD dwPos;
-//    dwPos.X = x;
-//    dwPos.Y = y;
-//    SetConsoleCursorPosition(hCon, dwPos);
-//
-//}
 
 void OcultarCursor() {
     HANDLE hCon;
@@ -73,7 +63,7 @@ void pintar_limites() {
     gotoxy(10, 45); printf("%c", 200);
     gotoxy(75, 45); printf("%c", 188);
 }
-void Pintar_Puntos() {
+void Pacman::Pintar_Puntos() {
     int m =0 ;
     //Puntos Lateral Izquierdo
     MurosXP[20] = 14; MurosYP[20] = 10;
@@ -185,7 +175,14 @@ void Pintar_Puntos() {
     gotoxy(64, 26); printf("%c", 46);
     gotoxy(64, 27); printf("%c", 46);
 
-
+    MurosXP[50] = 64; MurosYP[50] = 30;
+    MurosXP[51] = 64; MurosYP[51] = 31;
+    MurosXP[52] = 64; MurosYP[52] = 32;
+    MurosXP[53] = 64; MurosYP[53] = 33;
+    MurosXP[54] = 64; MurosYP[54] = 34;
+    MurosXP[55] = 64; MurosYP[55] = 35;
+    MurosXP[56] = 64; MurosYP[56] = 36;
+    MurosXP[57] = 64; MurosYP[57] = 37;
     gotoxy(64, 30); printf("%c", 46);
     gotoxy(64, 31); printf("%c", 46);
 
@@ -554,27 +551,37 @@ bool Pacman::verificarPuntos() {
         if (x + 2 == MurosXP[i] && y == MurosYP[i]) {
          
             //x -= 2;
+            gotoxy(x, y); printf(" ");
+            MurosXP[i] = 0;
+            MurosYP[i] = 0;
             return true;
            
         }
         else if (x - 2 == MurosXP[i] && y == MurosYP[i]) {
             
             //x += +2;
-
+            gotoxy(x, y); printf(" ");
+            MurosXP[i] = 0;
+            MurosYP[i] = 0;
             return true;
         }
         else if (x == MurosXP[i] && y + 1 == MurosYP[i]) {
             
 
             //y--;
-            return true;
+            gotoxy(x, y); printf(" ");
             MurosXP[i] = 0;
             MurosYP[i] = 0;
-            gotoxy(x, y); printf(" ");
+
+            return true;
+            
+
         }
         else if (x == MurosXP[i] && y - 1 == MurosYP[i]) {
             
-            
+            gotoxy(x, y); printf(" ");
+            MurosXP[i] = 0;
+            MurosYP[i] = 0;
             //y++;
             return true;
           
@@ -586,10 +593,6 @@ bool Pacman::verificarPuntos() {
 void Pacman::pintar() {
 
     gotoxy(x, y); printf("%c", 62);
-    //gotoxy(x, y + 1); printf("  %c%c ", 219, 219);
-    //gotoxy(x, y + 1); printf("@-%c-@", 219);
-
-    //gotoxy(x, y+2); printf("%c%c %c%c", 30, 190, 190,30);
 
 }
 void Pacman::pintarUP() {
@@ -886,35 +889,62 @@ void Ghosts::movercpu_2() {
     }
 
 
-    //int Timer;
-    //Timer+= Timer->GetTimeElapsed();
-    //int Random = (rand() % 4);
 }
+void Menu() {
 
-int main() {
+  
+        gotoxy(60, 20); printf("Pacman: >");
+        gotoxy(60, 22); printf("GHOSTS: M");
 
+    gotoxy(40, 20); printf(" Play");
+    gotoxy(40, 22); printf(" SALIR");
+    gotoxy(40, 24); printf(">");
+    sal = 1;
 
+    do {
+        tecla = _getch();
+        if (tecla == 'w') {
+            gotoxy(39, 20); printf(">");
+            gotoxy(39, 22); printf(" ");
+            pos = 2;
+        }
+        else {
+            if (tecla == 's') {
+                gotoxy(39, 20); printf(" ");
+                gotoxy(39, 22); printf(">");
+                pos = 2;
+            }
+        }
+        if (tecla == ' ') {
+            if (pos == 2) {
+                sal = 2;
+                //vidas = 5;
+            }
+            else {
+                if (pos == 2) {
+                    sal = 5;
+                }
+            }
+        }
+    } while (sal == 1);
+    rlutil::cls(); 
+}
+void Game() {
 
-    OcultarCursor();
-    //int x = 10, y = 10;
-   // rlutil::hidecursor();
-    Pacman A(40,10,3,0);
-
-    Pancitos B(30,38,0);
+    bool game_over;
+    Pacman A(40, 10, 3, 0);
+    game_over = false;
+    Pancitos B(30, 38, 0);
     Ghosts G(20, 5);
     Ghosts H(40, 20);
     A.pintar();
     A.pintar_vidas();
-
+    A.Pintar_Puntos();
     G.pintar();
-    //gotoxy(x, y); printf(">");
-    //rlutil::setBackgroundColor(rlutil::BLUE);
-
-    game_over = false;
     while (!game_over)
     {
         A.Puntaje();
-        Pintar_Puntos();
+
 
         rlutil::hidecursor();
         //B.pintar();
@@ -923,12 +953,32 @@ int main() {
         A.mover();
         A.morir();
         Pintar_Muros();
-        B.puntos(30,30,A);
+        B.puntos(30, 30, A);
         G.movercpu_2();
         H.movercpu();
         Sleep(5);
     }
 
-    return 0;
+
+}
+int main() {
+
+    //char press;
+
+   /// char run_again;
+   
+
+    while (sal != 5) {
+        rlutil::cls();
+
+        Menu();
+
+        while (sal == 2) {
+            Game();
+
+        }
+    }
+
+   
 
 }
